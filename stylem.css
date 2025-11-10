@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #464646;
+    color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    background-color: #ff0000;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+img {
+    /* REMOVEMOS width e height daqui */
+    
+    /* Propriedades comuns a TODAS as imagens */
+    border-radius: 8px;
+    border: 2px solid hsl(0, 100%, 50%);
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 0 15px #ff0000;
+    
+    /* Isso garante que a imagem cubra a caixa sem distorcer */
+    object-fit: cover; 
+}
+
+main {
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: #ff0000;
+    color: #ffffff;
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Estilo para FOTOS EM PÉ (dentro de .box, mas NÃO .box.img) */
+.box:not(.img) img {
+    width: 300px;
+    height: 500px;
+}
+
+/* Estilo para FOTOS DEITADAS (dentro de .box.img) */
+.box.img img {
+    width: 400px;  /* Largura maior para paisagem */
+    height: 300px; /* Altura menor para paisagem */
+}
+
+
+
+
+header h1{
+    font-size: 2.8em;
+    font-weight: 200;
+    cursor: pointer;
+    margin-right: 1320px;
+    font-family: "Montserrat", sans-serif;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+}
+
+header nav a{
+    margin-right: 1.3em;
+    font-size: 1.5em;
+}
+
+header h1, a{
+    color: #ffffff;
+    transition: 0.2s ease-in-out;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
+
+.titulo{/* Estilo para o título */
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.galeria{/* Estilo para a galeria */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.boximg{/* Estilo para as imagens da galeria */
+    flex: 1 1 23%;
+    min-height: 350px;
+    margin: 1%;
+    box-sizing: border-box;
+}
+
+.ajuste{/* Estilo para o ajuste das caixas das imagens*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+.video{/* Estilo para o vídeo */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 175px;
+    margin-bottom: 174px;
+}
+
+.video-item{/* Estilo para os itens do vídeo */
+    width: 30%;
+    height: 55%;
+}
+
+.video-box{/* Estilo para a caixa do vídeo */
+    width: 100%;
+    height: 50%;
+}
+
+.video-box1{/* Estilo para a caixa do vídeo 1 */
+    width: 100%;
+    height: 50%;
+}
+
+.textodescri{/* Estilo para o texto de descrição */
+    margin-top: 16px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+
+
+/* Ajuste de responsividade */
+@media (max-width: 1200px) {
+    header h1{
+        font-size: 32px;
+    }
+    main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-content{
+        width: 100%;
+        align-items: center;
+        margin-bottom: 15%;
+    }
+    .main-content .text, .projetos{
+        text-align: center;
+    }
+    .main-content .text, p{
+        width: 100%;
+        font-size: 13px;
+    }
+    .main-content .text p, .projetos .card{
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: 700px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    header h1{
+        font-size: 26px;
+    }
+    header nav{
+        margin-top: 24px;
+    }
+    header nav a{
+        font-size: 16px;
+    }
+    main .main-content .projetos .card{
+        width: 60%;
+        height: 80%;
+    }
+    main .main-content .text h2{
+        font-size: 1.8em;
+    }
+    main .main-content h2{
+        font-size: 1.8em;
+    }
+    main figure img{
+        width: 250px;
+        height: 250px;
+    }
+}

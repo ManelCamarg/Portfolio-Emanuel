@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.box{/* Estilo para a caixa principal */
+    height: 170px;
+    border: 3px solid #000;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: red;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #464646;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+header{
+    background-color: #ff0000;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    color: #ff0000;
+}
+
+header h1{
+    font-size: 2.8em;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+}
+
+header nav a{
+    margin-right: 1.3em;
+    font-size: 1.5em;
+}
+
+header h1, a{
+    color: #ffffff;
+    transition: 0.2s ease-in-out;
+}
+
+footer{
+    background-color: #ff0000;
+    color: white;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer span{
+    font-size: 0.8em;
+    font-weight: 200;
+}
+
+header h1{
+    font-size: 2.8em;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+}
+
+header nav a{
+    margin-right: 1.3em;
+    font-size: 1.5em;
+}
+
+header h1, a{
+    color: #ffffff;
+    transition: 0.2s ease-in-out;
+}
+
+.titulo{/* Estilo para o título */
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+}
+
+.galeria{/* Estilo para a galeria */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.boximg{/* Estilo para as imagens da galeria */
+    flex: 1 1 23%;
+    min-height: 350px;
+    margin: 1%;
+    box-sizing: border-box;
+}
+
+.ajuste{/* Estilo para o ajuste das caixas das imagens*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: rgb(255, 0, 0) 0px 0px 20px;
+}
+
+.video{/* Estilo para o vídeo */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.video-item{/* Estilo para os itens do vídeo */
+    width: 30%;
+    height: 75%;
+}
+
+.video-box{/* Estilo para a caixa do vídeo */
+    width: 100%;
+    height: auto;
+}
+
+.video-box1{/* Estilo para a caixa do vídeo 1 */
+    width: 100%;
+    height: 100%;
+}
+
+.textodescri{/* Estilo para o texto de descrição */
+    margin-top: 16px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1{
+    font-family: "Montserrat", sans-serif;
+}
+
+/*Ajustes de Responsividade*/
+@media (max-width: 768px) {
+    .boximg {
+        flex: 1 1 48%;
+    }
+}
+@media (max-width: 480px) {
+    .boximg {
+        flex: 1 1 100%;
+    }
+    .titulo{
+        font-size: 30px;
+    }
+}
+
+
+/* Estilos para telas menores que 768px */
+@media (max-width: 768px) {
+    .video-item {
+        flex: 1 1 48%;
+    }
+}
+
+/* Estilos para telas menores que 480px */
+@media (max-width: 480px) {
+    .video-item {
+        flex: 1 1 100%;
+    }
+    .video-box {
+        flex: 1 1 100%;
+    }
+    .video-box1 {
+        flex: 1 1 100%;
+    }
+    .textodescri {
+        font-size: 14px; /* Tamanho reduzido para texto em telas pequenas */
+    }
+    .ajuste {
+        flex: 1 1 100%;
+    }
+}
+
